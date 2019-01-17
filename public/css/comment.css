@@ -36,7 +36,9 @@ header div.container {
 .captcha {
     display: block;
 }
-
+.captcha-container button.btn-refresh {
+    padding: 5px;
+}
 .first-screen-logo {
     padding-top: 5px;
 }

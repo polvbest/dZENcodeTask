@@ -95,9 +95,10 @@ class CommentController extends Controller
   public function prepareCommentText(string $text = '', array $imagesPath = [])
   {
     foreach ($imagesPath as $src => $path) {
-      $image = (new FileController())->resizeImage($path);
-      $text  = preg_replace_callback('#<\s*\/?(img)\s*[^>]*?>#im',
-        function ($match) use ($path, $image) {
+/*      $text  = preg_replace_callback('#<\s*\/?(img)\s*[^>]*?>#im',*/
+      $text  = preg_replace_callback("/(<\s*img\s+[^>]*{$src}[^>]*>)/im",
+        function ($match) use ($path, $src) {
+          $image = (new FileController())->resizeImage($path);
           $match[0] = preg_replace('/height\s*=\s*"([^"\']*)"/im', 'height="' . $image->height() . '"', $match[0]);
           $match[0] = preg_replace('/width\s*=\s*"([^"\']*)"/im', 'width="' . $image->width() . '"', $match[0]);
           $match[0] = preg_replace('/src\s*=\s*"([^"\']*)"/im', 'src="' . $path . '"', $match[0]);

@@ -65,12 +65,12 @@ class FileController extends Controller
 
   public function resizeImage($path) {
     $image = Image::make($path);
-    if ($image->width() > 320) {
+    if ($image->width() > 320 && $image->width() >= $image->height()) {
       $image->resize(320, null, function ($constraint) {
         $constraint->aspectRatio();
       });
     }
-    if ($image->height() > 240) {
+    if ($image->height() > 240 && $image->height() > $image->width()) {
       $image->resize(null, 240, function ($constraint) {
         $constraint->aspectRatio();
       });
