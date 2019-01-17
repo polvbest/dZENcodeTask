@@ -14,9 +14,9 @@ use Illuminate\Support\Facades\Route;
 use Mews\Captcha\Captcha;
 
 
-Route::post('comment', "CommentController@store")->name('comment.store');
-Route::get('comment', "CommentController@index")->name('comment.index');
-Route::get('comment/sort', "CommentController@sorter")->name('sorter');
+Route::post('/', "CommentController@store")->name('comment.store');
+Route::get('/', "CommentController@index")->name('comment.index');
+Route::get('/sort', "CommentController@sorter")->name('sorter');
 Route::post('upload','CommentController@upload')->name('upload');
 Route::get('images/{path}','FileController@show')->name('image.show')->where(['path' => '.*']);
 Route::get('file/download/{path}','FileController@download')->name('download')->where(['path' => '.*']);
@@ -24,9 +24,9 @@ Route::get('file/download/{path}','FileController@download')->name('download')->
 /* CAPTCHA */
 Route::get('refresh_captcha', 'CaptchaController@refreshCaptcha')->name('captcha');
 
-Route::get('/', function () {
-    return view('comment');
-});
+//Route::get('/', function () {
+//    return view('comment');
+//});
 
 Auth::routes();
 
