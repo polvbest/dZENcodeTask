@@ -1,0 +1,180 @@
+
+header div.container {
+    height: 50px;
+    background-color: lightcoral;
+
+}
+
+.new-comment-container {
+    width: 100%;
+    display: block;
+}
+
+.new-comment {
+    padding: 15px;
+    display: block;
+}
+
+.logo-image {
+    padding-right: 5px;
+}
+
+.required:after {
+    content: '*';
+    color: red;
+    padding-left: 0.2em;
+}
+
+.new-comment .input-group-prepend {
+    width: 30%;
+}
+
+.new-comment .input-group-prepend span {
+    width: 100%;
+}
+
+.captcha {
+    display: block;
+}
+
+.first-screen-logo {
+    padding-top: 5px;
+}
+
+#open-form {
+    width: 150px;
+}
+
+.comment-table {
+    display: table;
+    width: 100%;
+}
+
+.comment-table .main-comment {
+    display: block;
+    min-height: 30px;
+}
+
+.comment-table .main-comment .comment-header {
+    display: flex;
+    min-height: 20px;
+    background-color: whitesmoke;
+    padding: 5px;
+}
+
+.comment-table .main-comment .comment-header > div {
+    display: flex;
+    padding-left: 5px;
+}
+
+.comment-table .main-comment .comment-header .author-avatar {
+    padding-left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: darkgrey;
+    border-radius: 0.3em;
+    overflow: hidden;
+}
+
+.comment-table .main-comment .comment-header .author-avatar img {
+    height: 25px;
+    width: 25px;
+}
+
+.comment-table .main-comment .comment-header .comment-created {
+    font-size: 0.9em;
+    padding-top: 0.15em;
+    color: #5e5d5d;
+}
+
+.comment-table .main-comment .comment-header .comment-add {
+    margin-left: auto;
+}
+
+.comment-table .table-header {
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 0 .5em #dddddd;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.comment-table .table-header .container:first-child {
+    padding-left: 5px;
+}
+.comment-table .table-header .container:last-child {
+    padding-right: 5px;
+}
+
+.sorter .sort {
+    display: block;
+    padding-right: 10px;
+    min-width: 30px;
+    height: 25px;
+}
+
+.comment-table .main-comment .comment-commentary {
+    padding-left: 5px;
+    margin-left: 10px;
+}
+
+.main-comment {
+    display: block;
+}
+
+.table-content {
+    display: table;
+    width: 100%;
+}
+
+.table-content .main-comment {
+    display: block;
+    width: 100%;
+}
+
+.wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.comment-text {
+    padding-left: 10px;
+}
+
+.iPager {
+    display: flex;
+    margin-left: auto;
+    width: auto;
+}
+.iPager .pagination {
+    margin: 0;
+}
+
+#btnGroupSorterFields {
+    width: 130px;
+    padding-left: 5px;
+}
+
+form .not-valid {
+    border: 1px solid red !important;
+    border-radius: 0.2em;
+}
+form .warning .alert {
+    margin-bottom: 0;
+}
+
+.iSorter {
+    display: flex;
+    flex-grow: 1;
+}
+.iSorter .action-sort {
+    padding-left: 7px;
+    padding-right: 7px;
+}
+.iSorter .dropdown-menu > .dropdown-item:not(.disabled):hover {
+    background-color: #e5e5e5;
+}
+.iSorter .dropdown-menu > .dropdown-item.disabled {
+    cursor: default;
+}
+
