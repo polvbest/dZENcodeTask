@@ -10,9 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-use Illuminate\Support\Facades\Route;
-use Mews\Captcha\Captcha;
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
 
 Route::post('/', "CommentController@store")->name('comment.store');
 Route::get('/', "CommentController@index")->name('comment.index');
@@ -23,10 +23,6 @@ Route::get('file/download/{path}','FileController@download')->name('download')->
 
 /* CAPTCHA */
 Route::get('refresh_captcha', 'CaptchaController@refreshCaptcha')->name('captcha');
-
-//Route::get('/', function () {
-//    return view('comment');
-//});
 
 Auth::routes();
 
